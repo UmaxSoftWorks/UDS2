@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{216AD60C-3903-48F9-9F37-80CD47824C8C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umax.Plugins.Images</RootNamespace>
+    <AssemblyName>Images</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="Classes\ColorSettings.cs" />
+    <Compile Include="Helpers\BitmapHelper.cs" />
+    <Compile Include="Helpers\FontHelper.cs" />
+    <Compile Include="Controls\ArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FontSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FontSelectControl.Designer.cs">
+      <DependentUpon>FontSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DataCompatible\DataCompatibleImageSettings.cs" />
+    <Compile Include="Enums\ResizeType.cs" />
+    <Compile Include="Common\ImageMaker.cs" />
+    <Compile Include="Controls\CompleteColorSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CompleteColorSelectControl.Designer.cs">
+      <DependentUpon>CompleteColorSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\FontSettings.cs" />
+    <Compile Include="Common\ImageSettings.cs" />
+    <Compile Include="Copy\CopyImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Copy\CopyImageControl.Designer.cs">
+      <DependentUpon>CopyImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Copy\CopyImageMaker.cs" />
+    <Compile Include="Copy\CopyImageSettings.cs" />
+    <Compile Include="Enums\ColorType.cs" />
+    <Compile Include="Enums\FontType.cs" />
+    <Compile Include="Enums\NameType.cs" />
+    <Compile Include="Enums\RenameType.cs" />
+    <Compile Include="Enums\NumberType.cs" />
+    <Compile Include="Enums\LocationType.cs" />
+    <Compile Include="Generate\Captcha\GenerateCaptchaImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Generate\Captcha\GenerateCaptchaImageControl.Designer.cs">
+      <DependentUpon>GenerateCaptchaImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate\Captcha\GenerateCaptchaImageMaker.cs" />
+    <Compile Include="Generate\Captcha\GenerateCaptchaImageSettings.cs" />
+    <Compile Include="Generate\Common\GenerateImageSettings.cs" />
+    <Compile Include="Generate\Figures\GenerateFiguresImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Generate\Figures\GenerateFiguresImageControl.Designer.cs">
+      <DependentUpon>GenerateFiguresImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate\Figures\GenerateFiguresImageMaker.cs" />
+    <Compile Include="Generate\Figures\GenerateFiguresImageSettings.cs" />
+    <Compile Include="Generate\Keywords\GenerateKeywordsImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Generate\Keywords\GenerateKeywordsImageControl.Designer.cs">
+      <DependentUpon>GenerateKeywordsImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate\Keywords\GenerateKeywordsImageMaker.cs" />
+    <Compile Include="Generate\Keywords\GenerateKeywordsImageSettings.cs" />
+    <Compile Include="Generate\Keyword\GenerateKeywordImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Generate\Keyword\GenerateKeywordImageControl.Designer.cs">
+      <DependentUpon>GenerateKeywordImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate\Keyword\GenerateKeywordImageMaker.cs" />
+    <Compile Include="Generate\Keyword\GenerateKeywordImageSettings.cs" />
+    <Compile Include="Generate\Text\GenerateTextImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Generate\Text\GenerateTextImageControl.Designer.cs">
+      <DependentUpon>GenerateTextImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate\Text\GenerateTextImageMaker.cs" />
+    <Compile Include="Generate\Text\GenerateTextImageSettings.cs" />
+    <Compile Include="Common\DataCompatible\DataCompatibleImageMaker.cs" />
+    <Compile Include="Modify\Border\Common\ModifyBorderImageSettings.cs" />
+    <Compile Include="Modify\Border\Keyword\ModifyBorderKeywordImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modify\Border\Keyword\ModifyBorderKeywordImageControl.Designer.cs">
+      <DependentUpon>ModifyBorderKeywordImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modify\Border\Keyword\ModifyBorderKeywordImageMaker.cs" />
+    <Compile Include="Modify\Border\Keyword\ModifyBorderKeywordImageSettings.cs" />
+    <Compile Include="Modify\Border\Text\ModifyBorderTextImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modify\Border\Text\ModifyBorderTextImageControl.Designer.cs">
+      <DependentUpon>ModifyBorderTextImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modify\Border\Text\ModifyBorderTextImageMaker.cs" />
+    <Compile Include="Modify\Border\Text\ModifyBorderTextImageSettings.cs" />
+    <Compile Include="Modify\Common\ModifyImageSettings.cs" />
+    <Compile Include="Modify\Figures\ModifyFiguresImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modify\Figures\ModifyFiguresImageControl.Designer.cs">
+      <DependentUpon>ModifyFiguresImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modify\Figures\ModifyFiguresImageMaker.cs" />
+    <Compile Include="Modify\Figures\ModifyFiguresImageSettings.cs" />
+    <Compile Include="Modify\Keywords\ModifyKeywordsImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modify\Keywords\ModifyKeywordsImageControl.Designer.cs">
+      <DependentUpon>ModifyKeywordsImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modify\Keywords\ModifyKeywordsImageMaker.cs" />
+    <Compile Include="Modify\Keywords\ModifyKeywordsImageSettings.cs" />
+    <Compile Include="Modify\Keyword\ModifyKeywordImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modify\Keyword\ModifyKeywordImageControl.Designer.cs">
+      <DependentUpon>ModifyKeywordImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modify\Keyword\ModifyKeywordImageMaker.cs" />
+    <Compile Include="Modify\Keyword\ModifyKeywordImageSettings.cs" />
+    <Compile Include="Modify\Resize\ModifyResizeImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modify\Resize\ModifyResizeImageControl.Designer.cs">
+      <DependentUpon>ModifyResizeImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modify\Resize\ModifyResizeImageMaker.cs" />
+    <Compile Include="Modify\Resize\ModifyResizeImageSettings.cs" />
+    <Compile Include="Modify\Text\ModifyTextImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modify\Text\ModifyTextImageControl.Designer.cs">
+      <DependentUpon>ModifyTextImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modify\Text\ModifyTextImageMaker.cs" />
+    <Compile Include="Modify\Text\ModifyTextImageSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Classes\Classes.csproj">
+      <Project>{2FB7B942-F181-467F-BA74-7F5E02B60B48}</Project>
+      <Name>Classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{B32D1707-78F5-43F0-9AA0-6BEEE6A9C2AF}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ArrowButton.resx">
+      <DependentUpon>ArrowButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ColorSelectControl.resx">
+      <DependentUpon>ColorSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CompleteColorSelectControl.resx">
+      <DependentUpon>CompleteColorSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FontSelectControl.resx">
+      <DependentUpon>FontSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy\CopyImageControl.resx">
+      <DependentUpon>CopyImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate\Captcha\GenerateCaptchaImageControl.resx">
+      <DependentUpon>GenerateCaptchaImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate\Figures\GenerateFiguresImageControl.resx">
+      <DependentUpon>GenerateFiguresImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate\Keywords\GenerateKeywordsImageControl.resx">
+      <DependentUpon>GenerateKeywordsImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate\Keyword\GenerateKeywordImageControl.resx">
+      <DependentUpon>GenerateKeywordImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate\Text\GenerateTextImageControl.resx">
+      <DependentUpon>GenerateTextImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify\Border\Keyword\ModifyBorderKeywordImageControl.resx">
+      <DependentUpon>ModifyBorderKeywordImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify\Border\Text\ModifyBorderTextImageControl.resx">
+      <DependentUpon>ModifyBorderTextImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify\Figures\ModifyFiguresImageControl.resx">
+      <DependentUpon>ModifyFiguresImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify\Keywords\ModifyKeywordsImageControl.resx">
+      <DependentUpon>ModifyKeywordsImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify\Keyword\ModifyKeywordImageControl.resx">
+      <DependentUpon>ModifyKeywordImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify\Resize\ModifyResizeImageControl.resx">
+      <DependentUpon>ModifyResizeImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify\Text\ModifyTextImageControl.resx">
+      <DependentUpon>ModifyTextImageControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

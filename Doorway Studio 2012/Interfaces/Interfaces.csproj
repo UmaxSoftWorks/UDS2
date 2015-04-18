@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B32D1707-78F5-43F0-9AA0-6BEEE6A9C2AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umax.Interfaces</RootNamespace>
+    <AssemblyName>Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="Automator\IAutomatorClassEventArgs.cs" />
+    <Compile Include="Automator\IAutomatorPropertyEventArgs.cs" />
+    <Compile Include="Compatibility\Images\IImageDataCompatible.cs" />
+    <Compile Include="Compatibility\Tasks\ITaskDataCompatible.cs" />
+    <Compile Include="Compatibility\Tasks\ITaskImageCompatible.cs" />
+    <Compile Include="Compatibility\ID\IImageIDCompatible.cs" />
+    <Compile Include="Compatibility\ID\IKeywordIDCompatible.cs" />
+    <Compile Include="Compatibility\Tasks\ITaskMultiRunCompatible.cs" />
+    <Compile Include="Compatibility\ID\IPresetIDCompatible.cs" />
+    <Compile Include="Compatibility\ID\ITemplateIDCompatible.cs" />
+    <Compile Include="Compatibility\Tasks\ITaskTextCompatible.cs" />
+    <Compile Include="Compatibility\ID\ITextIDCompatible.cs" />
+    <Compile Include="Compatibility\Tasks\ITaskTokensCompatible.cs" />
+    <Compile Include="Automator\Enums\AutomatorPropertyAttributeType.cs" />
+    <Compile Include="Automator\Events\AutomatorPropertyEventHandler.cs" />
+    <Compile Include="Automator\Events\AutomatorClassEventHandler.cs" />
+    <Compile Include="Enums\TaskEditType.cs" />
+    <Compile Include="TemplateEditor\ITokenTemplateEditorCompatible.cs" />
+    <Compile Include="Compatibility\Text\ITextDataCompatible.cs" />
+    <Compile Include="Compatibility\Tokens\ITokensRegexCompatible.cs" />
+    <Compile Include="Compatibility\Tokens\ITokensCompatible.cs" />
+    <Compile Include="Containers\IContentContainerExtensions.cs" />
+    <Compile Include="Enums\ItemSelectType.cs" />
+    <Compile Include="Containers\IContentContainer.cs" />
+    <Compile Include="Containers\IDataContainer.cs" />
+    <Compile Include="Containers\IImageContainer.cs" />
+    <Compile Include="Containers\Items\ICategory.cs" />
+    <Compile Include="Containers\Items\IFile.cs" />
+    <Compile Include="Containers\Items\IImage.cs" />
+    <Compile Include="Containers\Items\IItem.cs" />
+    <Compile Include="Containers\Items\IKeyWord.cs" />
+    <Compile Include="Containers\Items\IPage.cs" />
+    <Compile Include="Containers\Items\IPreset.cs" />
+    <Compile Include="Containers\Items\ITask.cs" />
+    <Compile Include="Containers\Items\ITemplate.cs" />
+    <Compile Include="Containers\Items\IText.cs" />
+    <Compile Include="Containers\Items\IWorkSpace.cs" />
+    <Compile Include="Containers\ITextContainer.cs" />
+    <Compile Include="Containers\ITokenContainer.cs" />
+    <Compile Include="Enums\FileTokenType.cs" />
+    <Compile Include="Enums\MakerStateType.cs" />
+    <Compile Include="Enums\LanguageType.cs" />
+    <Compile Include="Enums\TaskScheduleType.cs" />
+    <Compile Include="Enums\TaskStateType.cs" />
+    <Compile Include="Enums\FileType.cs" />
+    <Compile Include="Enums\TreeTraversalType.cs" />
+    <Compile Include="Events\SimpleEventHandler.cs" />
+    <Compile Include="Events\SimpleSenderEventHandler.cs" />
+    <Compile Include="IClone.cs" />
+    <Compile Include="Containers\IEventedList.cs" />
+    <Compile Include="Images\IImageControl.cs" />
+    <Compile Include="Images\IImageMaker.cs" />
+    <Compile Include="Images\IImageSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\ITaskElement.cs" />
+    <Compile Include="Tasks\ITaskExecutor.cs" />
+    <Compile Include="Tasks\ITaskSettings.cs" />
+    <Compile Include="Tasks\ITaskWindow.cs" />
+    <Compile Include="Text\ITextControl.cs" />
+    <Compile Include="Text\ITextMaker.cs" />
+    <Compile Include="Text\ITextSettings.cs" />
+    <Compile Include="Tokens\IComplexToken.cs" />
+    <Compile Include="Extensibility\Tokens\IExtendableToken.cs" />
+    <Compile Include="Tokens\ISimpleToken.cs" />
+    <Compile Include="Tokens\IToken.cs" />
+    <Compile Include="WebParser\IWebParserControl.cs" />
+    <Compile Include="WebParser\IWebParserElement.cs" />
+    <Compile Include="WebParser\IWebParserExecutor.cs" />
+    <Compile Include="WebParser\IWebParserSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

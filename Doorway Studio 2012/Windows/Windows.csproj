@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1695E3D5-DCE5-4006-9AFE-F6FE4C35436B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umax.Windows</RootNamespace>
+    <AssemblyName>Windows</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Brand.cs">
+      <Link>Brand.cs</Link>
+    </Compile>
+    <Compile Include="..\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="Classes\DateNode.cs" />
+    <Compile Include="Classes\Environment.cs" />
+    <Compile Include="Classes\GuiOptions.cs" />
+    <Compile Include="Classes\IDElement.cs" />
+    <Compile Include="Classes\WindowsCollection.cs" />
+    <Compile Include="Controls\Editors\ImagesEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\ImagesEditorControl.Designer.cs">
+      <DependentUpon>ImagesEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\KeywordsEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\KeywordsEditorControl.Designer.cs">
+      <DependentUpon>KeywordsEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\TextEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\TextEditorControl.Designer.cs">
+      <DependentUpon>TextEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\ActiveTasksGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\ActiveTasksGridControl.Designer.cs">
+      <DependentUpon>ActiveTasksGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editors\TemplateEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Editors\TemplateEditorControl.Designer.cs">
+      <DependentUpon>TemplateEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Data\ImagesDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Data\ImagesDataControl.Designer.cs">
+      <DependentUpon>ImagesDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Data\KeywordsDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Data\KeywordsDataControl.Designer.cs">
+      <DependentUpon>KeywordsDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Data\PresetsDataContol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Data\PresetsDataContol.Designer.cs">
+      <DependentUpon>PresetsDataContol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Data\TasksDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Data\TasksDataControl.Designer.cs">
+      <DependentUpon>TasksDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\Data\TextTreeDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\Data\TextTreeDataControl.Designer.cs">
+      <DependentUpon>TextTreeDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\Data\KeywordsTreeDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\Data\KeywordsTreeDataControl.Designer.cs">
+      <DependentUpon>KeywordsTreeDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\Data\ImagesTreeDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\Data\ImagesTreeDataControl.Designer.cs">
+      <DependentUpon>ImagesTreeDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\Data\TasksGridDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\Data\TasksGridDataControl.Designer.cs">
+      <DependentUpon>TasksGridDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\Data\TasksTreeDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\Data\TasksTreeDataControl.Designer.cs">
+      <DependentUpon>TasksTreeDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Data\TemplatesDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Data\TemplatesDataControl.Designer.cs">
+      <DependentUpon>TemplatesDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Data\TextDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Data\TextDataControl.Designer.cs">
+      <DependentUpon>TextDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Data\WorkSpacesDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Data\WorkSpacesDataControl.Designer.cs">
+      <DependentUpon>WorkSpacesDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\LogContol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\LogContol.Designer.cs">
+      <DependentUpon>LogContol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\Manager\ActiveTasksGridManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\Manager\ActiveTasksGridManagerControl.Designer.cs">
+      <DependentUpon>ActiveTasksGridManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\Manager\TasksGridManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\Manager\TasksGridManagerControl.Designer.cs">
+      <DependentUpon>TasksGridManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuStrip.Designer.cs">
+      <DependentUpon>MenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TabsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TabsControl.Designer.cs">
+      <DependentUpon>TabsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\TasksGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\TasksGridControl.Designer.cs">
+      <DependentUpon>TasksGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\TasksTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\TasksTreeControl.Designer.cs">
+      <DependentUpon>TasksTreeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\Data\TemplatesTreeDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\Data\TemplatesTreeDataControl.Designer.cs">
+      <DependentUpon>TemplatesTreeDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrayIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TrayIcon.Designer.cs">
+      <DependentUpon>TrayIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Views\WorkSpacesGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Views\WorkSpacesGridControl.Designer.cs">
+      <DependentUpon>WorkSpacesGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\MainMenuType.cs" />
+    <Compile Include="Enums\TasksDateFilterType.cs" />
+    <Compile Include="Helpers\DataHelper.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Controls\Options\Core\General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Options\Core\General.Designer.cs">
+      <DependentUpon>General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Options\Core\Log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Options\Core\Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Options\Core\PlugIns.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Options\Core\PlugIns.Designer.cs">
+      <DependentUpon>PlugIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\General.Designer.cs">
+      <DependentUpon>General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\Monitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\Monitor.Designer.cs">
+      <DependentUpon>Monitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\Notifications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\Notifications.Designer.cs">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\Reporting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\Reporting.Designer.cs">
+      <DependentUpon>Reporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\StartUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\StartUp.Designer.cs">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\Updates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Options\GUI\Updates.Designer.cs">
+      <DependentUpon>Updates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\AppearanceType.cs" />
+    <Compile Include="Enums\DataActionType.cs" />
+    <Compile Include="Enums\DataElementType.cs" />
+    <Compile Include="Enums\ManagerLocationType.cs" />
+    <Compile Include="Helpers\ToolsHelper.cs" />
+    <Compile Include="Interfaces\IEventedControl.cs" />
+    <Compile Include="Interfaces\IExitableWindow.cs" />
+    <Compile Include="Interfaces\IStandardWindow.cs" />
+    <Compile Include="Interfaces\ITasksControl.cs" />
+    <Compile Include="Interfaces\IWorkSpacesContol.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stuff\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RunTime.cs" />
+    <Compile Include="Tools\Automator\Editors\FilesLocationEditor.cs" />
+    <Compile Include="Tools\Automator\Pro\AutomatorPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Automator\Pro\AutomatorPro.Designer.cs">
+      <DependentUpon>AutomatorPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Automator\Regular\Automator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Automator\Regular\Automator.Designer.cs">
+      <DependentUpon>Automator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Automator\UI\AutomatorPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\TemplateEditor\Classes\TokenInfo.cs" />
+    <Compile Include="Tools\TemplateEditor\Controls\TemplateEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\TemplateEditor\Controls\TemplateEditorControl.Designer.cs">
+      <DependentUpon>TemplateEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TemplateEditor\Controls\TextEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\TemplateEditor\Controls\TextEditorControl.Designer.cs">
+      <DependentUpon>TextEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TemplateEditor\Controls\TokensControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\TemplateEditor\Controls\TokensControl.Designer.cs">
+      <DependentUpon>TokensControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TemplateEditor\UI\IntellisenseRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Common\ErrorReporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Common\ErrorReporter.Designer.cs">
+      <DependentUpon>ErrorReporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Common\FileMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Common\FileMonitor.Designer.cs">
+      <DependentUpon>FileMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Common\Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Common\Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Common\TrayWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Common\TrayWindow.Designer.cs">
+      <DependentUpon>TrayWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Common\Updater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Common\Updater.Designer.cs">
+      <DependentUpon>Updater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Data\ItemAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Data\ItemAction.Designer.cs">
+      <DependentUpon>ItemAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Data\ItemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Data\ItemEdit.Designer.cs">
+      <DependentUpon>ItemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Data\TaskCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Data\TaskCreate.Designer.cs">
+      <DependentUpon>TaskCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Help\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Help\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Help\EULA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Help\EULA.Designer.cs">
+      <DependentUpon>EULA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Log\Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Log\Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Log\TaskLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Log\TaskLog.Designer.cs">
+      <DependentUpon>TaskLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TemplateEditor\TemplateEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\TemplateEditor\TemplateEditor.Designer.cs">
+      <DependentUpon>TemplateEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StandardWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Classes\Classes.csproj">
+      <Project>{2FB7B942-F181-467F-BA74-7F5E02B60B48}</Project>
+      <Name>Classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{72A40BDC-2B50-4B20-B97A-EA61060C659C}</Project>
+      <Name>Core %28Common\Core%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{B32D1707-78F5-43F0-9AA0-6BEEE6A9C2AF}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources\Resources.csproj">
+      <Project>{B07A1669-CAA0-4933-9CA8-A5F1618C790B}</Project>
+      <Name>Resources %28Common\Resources%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI\UI.csproj">
+      <Project>{EAAB177B-EEE1-4FA1-85CD-16208C5B25E8}</Project>
+      <Name>UI %28UI\UI%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Editors\ImagesEditorControl.resx">
+      <DependentUpon>ImagesEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Editors\KeywordsEditorControl.resx">
+      <DependentUpon>KeywordsEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Editors\TextEditorControl.resx">
+      <DependentUpon>TextEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\ActiveTasksGridControl.resx">
+      <DependentUpon>ActiveTasksGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Editors\TemplateEditorControl.resx">
+      <DependentUpon>TemplateEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Data\ImagesDataControl.resx">
+      <DependentUpon>ImagesDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Data\KeywordsDataControl.resx">
+      <DependentUpon>KeywordsDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Data\TasksDataControl.resx">
+      <DependentUpon>TasksDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\Data\TextTreeDataControl.resx">
+      <DependentUpon>TextTreeDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\Data\KeywordsTreeDataControl.resx">
+      <DependentUpon>KeywordsTreeDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\Data\ImagesTreeDataControl.resx">
+      <DependentUpon>ImagesTreeDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\Data\TasksGridDataControl.resx">
+      <DependentUpon>TasksGridDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\Data\TasksTreeDataControl.resx">
+      <DependentUpon>TasksTreeDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Data\TemplatesDataControl.resx">
+      <DependentUpon>TemplatesDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Data\TextDataControl.resx">
+      <DependentUpon>TextDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Data\WorkSpacesDataControl.resx">
+      <DependentUpon>WorkSpacesDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\LogContol.resx">
+      <DependentUpon>LogContol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\Manager\ActiveTasksGridManagerControl.resx">
+      <DependentUpon>ActiveTasksGridManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\Manager\TasksGridManagerControl.resx">
+      <DependentUpon>TasksGridManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MenuStrip.resx">
+      <DependentUpon>MenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Options\Core\General.resx">
+      <DependentUpon>General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Options\Core\Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Options\Core\PlugIns.resx">
+      <DependentUpon>PlugIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Options\GUI\General.resx">
+      <DependentUpon>General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Options\GUI\Monitor.resx">
+      <DependentUpon>Monitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Options\GUI\Notifications.resx">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Options\GUI\Reporting.resx">
+      <DependentUpon>Reporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Options\GUI\StartUp.resx">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Options\GUI\Updates.resx">
+      <DependentUpon>Updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TabsControl.resx">
+      <DependentUpon>TabsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\TasksGridControl.resx">
+      <DependentUpon>TasksGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\TasksTreeControl.resx">
+      <DependentUpon>TasksTreeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\Data\TemplatesTreeDataControl.resx">
+      <DependentUpon>TemplatesTreeDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrayIcon.resx">
+      <DependentUpon>TrayIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Views\WorkSpacesGridControl.resx">
+      <DependentUpon>WorkSpacesGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stuff\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Automator\Pro\AutomatorPro.resx">
+      <DependentUpon>AutomatorPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Automator\Regular\Automator.resx">
+      <DependentUpon>Automator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TemplateEditor\Controls\TemplateEditorControl.resx">
+      <DependentUpon>TemplateEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TemplateEditor\Controls\TextEditorControl.resx">
+      <DependentUpon>TextEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TemplateEditor\Controls\TokensControl.resx">
+      <DependentUpon>TokensControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Common\ErrorReporter.resx">
+      <DependentUpon>ErrorReporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Common\FileMonitor.resx">
+      <DependentUpon>FileMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Common\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Common\TrayWindow.resx">
+      <DependentUpon>TrayWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Common\Updater.resx">
+      <DependentUpon>Updater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Data\ItemAction.resx">
+      <DependentUpon>ItemAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Data\ItemEdit.resx">
+      <DependentUpon>ItemEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Data\TaskCreate.resx">
+      <DependentUpon>TaskCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Help\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Help\EULA.resx">
+      <DependentUpon>EULA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Log\Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Log\TaskLog.resx">
+      <DependentUpon>TaskLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TemplateEditor\TemplateEditor.resx">
+      <DependentUpon>TemplateEditor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

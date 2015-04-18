@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF0A335D-D6D0-4F7C-AC7D-EB2D2082B56C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebParser.Parser</RootNamespace>
+    <AssemblyName>Parser</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\Web Parser\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Doorway Studio 2012\Brand.cs">
+      <Link>Brand.cs</Link>
+    </Compile>
+    <Compile Include="..\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="Parsing\Common\WebParserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parsing\Common\WebParserControl.Designer.cs">
+      <DependentUpon>WebParserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parsing\Common\WebParserSettings.cs" />
+    <Compile Include="Parsing\Pages\PagesParserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parsing\Pages\PagesParserControl.Designer.cs">
+      <DependentUpon>PagesParserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parsing\Pages\PagesParserElement.cs" />
+    <Compile Include="Parsing\Pages\PagesParserExecutor.cs" />
+    <Compile Include="Parsing\Pages\PagesParserSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Doorway Studio 2012\Classes\Classes.csproj">
+      <Project>{2FB7B942-F181-467F-BA74-7F5E02B60B48}</Project>
+      <Name>Classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Doorway Studio 2012\Interfaces\Interfaces.csproj">
+      <Project>{B32D1707-78F5-43F0-9AA0-6BEEE6A9C2AF}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Doorway Studio 2012\Resources\Resources.csproj">
+      <Project>{B07A1669-CAA0-4933-9CA8-A5F1618C790B}</Project>
+      <Name>Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{EC24D9BB-A429-44E1-AD52-06339E9D1E71}</Project>
+      <Name>Core %28Web Parser\Common\Core%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Parsing\SEO\" />
+    <Folder Include="Parsing\Sites\" />
+    <Folder Include="Text\Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Parsing\Common\WebParserControl.resx">
+      <DependentUpon>WebParserControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

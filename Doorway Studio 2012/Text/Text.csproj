@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C41F7305-06D0-422E-9903-69A12C48E326}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umax.Plugins.Text</RootNamespace>
+    <AssemblyName>Text</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="CommaConnection\Common\CommaConnectionTextSettings.cs" />
+    <Compile Include="CommaConnection\Consistently\CommaConnectionConsistentlyTextMaker.cs" />
+    <Compile Include="CommaConnection\Consistently\CommaConnectionConsistentlyTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommaConnection\Consistently\CommaConnectionConsistentlyTextControl.Designer.cs">
+      <DependentUpon>CommaConnectionConsistentlyTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommaConnection\Random\CommaConnectionRandomTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommaConnection\Random\CommaConnectionRandomTextControl.Designer.cs">
+      <DependentUpon>CommaConnectionRandomTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommaConnection\Random\CommaConnectionRandomTextMaker.cs" />
+    <Compile Include="CopyPaste\Blocks\CopyPasteBlocksTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CopyPaste\Blocks\CopyPasteBlocksTextControl.Designer.cs">
+      <DependentUpon>CopyPasteBlocksTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyPaste\Blocks\CopyPasteBlocksTextMaker.cs" />
+    <Compile Include="CopyPaste\Blocks\CopyPasteBlocksTextSettings.cs" />
+    <Compile Include="CopyPaste\LineByLine\CopyPasteLineByLineTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CopyPaste\LineByLine\CopyPasteLineByLineTextControl.Designer.cs">
+      <DependentUpon>CopyPasteLineByLineTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyPaste\LineByLine\CopyPasteLineByLineTextMaker.cs" />
+    <Compile Include="CopyPaste\LineByLine\CopyPasteLineByLineTextSettings.cs" />
+    <Compile Include="Enums\ExternalLocationType.cs" />
+    <Compile Include="Enums\LocationType.cs" />
+    <Compile Include="Enums\TokenType.cs" />
+    <Compile Include="Common\TextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\TextControl.Designer.cs">
+      <DependentUpon>TextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\TextMaker.cs" />
+    <Compile Include="Common\TextSettings.cs" />
+    <Compile Include="ConceptualGraph\Custom\ConceptualGraphCustomTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConceptualGraph\Custom\ConceptualGraphCustomTextControl.Designer.cs">
+      <DependentUpon>ConceptualGraphCustomTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConceptualGraph\Custom\ConceptualGraphCustomTextMaker.cs" />
+    <Compile Include="ConceptualGraph\Custom\ConceptualGraphCustomTextSettings.cs" />
+    <Compile Include="CopyPaste\Consistently\CopyPasteConsistentlyTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CopyPaste\Consistently\CopyPasteConsistentlyTextControl.Designer.cs">
+      <DependentUpon>CopyPasteConsistentlyTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyPaste\Consistently\CopyPasteConsistentlyTextSettings.cs" />
+    <Compile Include="CopyPaste\Random\CopyPasteRandomTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CopyPaste\Random\CopyPasteRandomTextControl.Designer.cs">
+      <DependentUpon>CopyPasteRandomTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyPaste\Consistently\CopyPasteConsistentlyTextMaker.cs" />
+    <Compile Include="Enums\AnalyseType.cs" />
+    <Compile Include="Enums\ConstructionType.cs" />
+    <Compile Include="Enums\KeywordsInsertType.cs" />
+    <Compile Include="Enums\PunctuationMarksType.cs" />
+    <Compile Include="Enums\SentencesType.cs" />
+    <Compile Include="Grams\Bi\BiGramTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Grams\Bi\BiGramTextControl.Designer.cs">
+      <DependentUpon>BiGramTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grams\Bi\BiGramTextMaker.cs" />
+    <Compile Include="Grams\Bi\BiGramTextSettings.cs" />
+    <Compile Include="Grams\Tri\TriGramTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Grams\Tri\TriGramTextControl.Designer.cs">
+      <DependentUpon>TriGramTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grams\Tri\TriGramTextMaker.cs" />
+    <Compile Include="Grams\Tri\TriGramTextSettings.cs" />
+    <Compile Include="MarkovChain\Classic\MarkovChainClassicTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarkovChain\Classic\MarkovChainClassicTextControl.Designer.cs">
+      <DependentUpon>MarkovChainClassicTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkovChain\Classic\MarkovChainClassicTextMaker.cs" />
+    <Compile Include="MarkovChain\Classic\MarkovChainClassicTextSettings.cs" />
+    <Compile Include="MarkovChain\Classic\Structs.cs" />
+    <Compile Include="MarkovChain\Custom\MarkovChainCustomTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarkovChain\Custom\MarkovChainCustomTextControl.Designer.cs">
+      <DependentUpon>MarkovChainCustomTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkovChain\Custom\MarkovChainCustomTextMaker.cs" />
+    <Compile Include="MarkovChain\Custom\MarkovChainCustomTextSettings.cs" />
+    <Compile Include="Mix\MixTextMaker.cs" />
+    <Compile Include="Mix\MixTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mix\MixTextControl.Designer.cs">
+      <DependentUpon>MixTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mix\MixTextSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CopyPaste\Random\CopyPasteRandomTextMaker.cs" />
+    <Compile Include="CopyPaste\Random\CopyPasteRandomTextSettings.cs" />
+    <Compile Include="Random\RandomTextMaker.cs" />
+    <Compile Include="Random\RandomTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Random\RandomTextControl.Designer.cs">
+      <DependentUpon>RandomTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Random\RandomTextSettings.cs" />
+    <Compile Include="Reverse\Advanced\Random\ReverseAdvancedRandomTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reverse\Advanced\Random\ReverseAdvancedRandomTextControl.Designer.cs">
+      <DependentUpon>ReverseAdvancedRandomTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reverse\Advanced\Random\ReverseAdvancedRandomTextMaker.cs" />
+    <Compile Include="Reverse\Advanced\Random\ReverseAdvancedRandomTextSettings.cs" />
+    <Compile Include="Reverse\Simple\Blocks\ReverseSimpleBlocksTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reverse\Simple\Blocks\ReverseSimpleBlocksTextControl.Designer.cs">
+      <DependentUpon>ReverseSimpleBlocksTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reverse\Simple\Blocks\ReverseSimpleBlocksTextMaker.cs" />
+    <Compile Include="Reverse\Simple\Blocks\ReverseSimpleBlocksTextSettings.cs" />
+    <Compile Include="Reverse\Simple\Consistently\ReverseSimpleConsistentlyTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reverse\Simple\Consistently\ReverseSimpleConsistentlyTextControl.Designer.cs">
+      <DependentUpon>ReverseSimpleConsistentlyTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reverse\Simple\Consistently\ReverseSimpleConsistentlyTextMaker.cs" />
+    <Compile Include="Reverse\Simple\Consistently\ReverseSimpleConsistentlyTextSettings.cs" />
+    <Compile Include="Reverse\Simple\LineByLine\ReverseSimpleLineByLineTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reverse\Simple\LineByLine\ReverseSimpleLineByLineTextControl.Designer.cs">
+      <DependentUpon>ReverseSimpleLineByLineTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reverse\Simple\LineByLine\ReverseSimpleLineByLineTextMaker.cs" />
+    <Compile Include="Reverse\Simple\LineByLine\ReverseSimpleLineByLineTextSettings.cs" />
+    <Compile Include="Reverse\Simple\Random\ReverseSimpleRandomTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reverse\Simple\Random\ReverseSimpleRandomTextControl.Designer.cs">
+      <DependentUpon>ReverseSimpleRandomTextControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reverse\Simple\Random\ReverseSimpleRandomTextMaker.cs" />
+    <Compile Include="Reverse\Simple\Random\ReverseSimpleRandomTextSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Classes\Classes.csproj">
+      <Project>{2FB7B942-F181-467F-BA74-7F5E02B60B48}</Project>
+      <Name>Classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{B32D1707-78F5-43F0-9AA0-6BEEE6A9C2AF}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommaConnection\Consistently\CommaConnectionConsistentlyTextControl.resx">
+      <DependentUpon>CommaConnectionConsistentlyTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommaConnection\Random\CommaConnectionRandomTextControl.resx">
+      <DependentUpon>CommaConnectionRandomTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\TextControl.resx">
+      <DependentUpon>TextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConceptualGraph\Custom\ConceptualGraphCustomTextControl.resx">
+      <DependentUpon>ConceptualGraphCustomTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyPaste\Blocks\CopyPasteBlocksTextControl.resx">
+      <DependentUpon>CopyPasteBlocksTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyPaste\Consistently\CopyPasteConsistentlyTextControl.resx">
+      <DependentUpon>CopyPasteConsistentlyTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyPaste\LineByLine\CopyPasteLineByLineTextControl.resx">
+      <DependentUpon>CopyPasteLineByLineTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyPaste\Random\CopyPasteRandomTextControl.resx">
+      <DependentUpon>CopyPasteRandomTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grams\Bi\BiGramTextControl.resx">
+      <DependentUpon>BiGramTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grams\Tri\TriGramTextControl.resx">
+      <DependentUpon>TriGramTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkovChain\Classic\MarkovChainClassicTextControl.resx">
+      <DependentUpon>MarkovChainClassicTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkovChain\Custom\MarkovChainCustomTextControl.resx">
+      <DependentUpon>MarkovChainCustomTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mix\MixTextControl.resx">
+      <DependentUpon>MixTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Random\RandomTextControl.resx">
+      <DependentUpon>RandomTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reverse\Advanced\Random\ReverseAdvancedRandomTextControl.resx">
+      <DependentUpon>ReverseAdvancedRandomTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reverse\Simple\Blocks\ReverseSimpleBlocksTextControl.resx">
+      <DependentUpon>ReverseSimpleBlocksTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reverse\Simple\Consistently\ReverseSimpleConsistentlyTextControl.resx">
+      <DependentUpon>ReverseSimpleConsistentlyTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reverse\Simple\LineByLine\ReverseSimpleLineByLineTextControl.resx">
+      <DependentUpon>ReverseSimpleLineByLineTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reverse\Simple\Random\ReverseSimpleRandomTextControl.resx">
+      <DependentUpon>ReverseSimpleRandomTextControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reverse\Advanced\Blocks\" />
+    <Folder Include="Reverse\Advanced\Consistently\" />
+    <Folder Include="Reverse\Advanced\LineByLine\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

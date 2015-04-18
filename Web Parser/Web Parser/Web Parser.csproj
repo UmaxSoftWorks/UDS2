@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84E75D40-F356-46B5-80E0-2A03B5C91934}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebParser</RootNamespace>
+    <AssemblyName>Web Parser</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\Web Parser\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>..\..\Doorway Studio 2012\Resources\Resources\IconGrey.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Doorway Studio 2012\Brand.cs">
+      <Link>Brand.cs</Link>
+    </Compile>
+    <Compile Include="..\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="Classes\Environment.cs" />
+    <Compile Include="Classes\GuiOptions.cs" />
+    <Compile Include="Controls\ActiveTasksGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ActiveTasksGridControl.Designer.cs">
+      <DependentUpon>ActiveTasksGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AllTasksGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AllTasksGridControl.Designer.cs">
+      <DependentUpon>AllTasksGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="RunTime.cs" />
+    <Compile Include="Windows\Tasks\TaskCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tasks\TaskCreate.Designer.cs">
+      <DependentUpon>TaskCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Tasks\TaskEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tasks\TaskEditor.Designer.cs">
+      <DependentUpon>TaskEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Tasks\TaskLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tasks\TaskLog.Designer.cs">
+      <DependentUpon>TaskLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Tools\EULA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tools\EULA.Designer.cs">
+      <DependentUpon>EULA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StartUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StartUp.Designer.cs">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\Tools\MainLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Tools\MainLog.Designer.cs">
+      <DependentUpon>MainLog.cs</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Doorway Studio 2012\Classes\Classes.csproj">
+      <Project>{2FB7B942-F181-467F-BA74-7F5E02B60B48}</Project>
+      <Name>Classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Doorway Studio 2012\Interfaces\Interfaces.csproj">
+      <Project>{B32D1707-78F5-43F0-9AA0-6BEEE6A9C2AF}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Doorway Studio 2012\Resources\Resources.csproj">
+      <Project>{B07A1669-CAA0-4933-9CA8-A5F1618C790B}</Project>
+      <Name>Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Doorway Studio 2012\UI\UI.csproj">
+      <Project>{EAAB177B-EEE1-4FA1-85CD-16208C5B25E8}</Project>
+      <Name>UI %28UI\UI%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{EC24D9BB-A429-44E1-AD52-06339E9D1E71}</Project>
+      <Name>Core %28Web Parser\Common\Core%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ActiveTasksGridControl.resx">
+      <DependentUpon>ActiveTasksGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AllTasksGridControl.resx">
+      <DependentUpon>AllTasksGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StartUp.resx">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tasks\TaskCreate.resx">
+      <DependentUpon>TaskCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tasks\TaskEditor.resx">
+      <DependentUpon>TaskEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tasks\TaskLog.resx">
+      <DependentUpon>TaskLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Tools\MainLog.resx">
+      <DependentUpon>MainLog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

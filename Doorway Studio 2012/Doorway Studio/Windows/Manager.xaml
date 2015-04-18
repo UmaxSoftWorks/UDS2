@@ -1,0 +1,10 @@
+﻿<Window x:Class="DoorwayStudio.Windows.Manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:helpers="clr-namespace:Umax.WPF.Helpers;assembly=WPF"
+        xmlns:controls="clr-namespace:Umax.WPF.Controls;assembly=WPF"
+        Title="Doorway Studio 2012" Height="500" Width="300" Loaded="WindowLoaded" Closed="WindowClosed" Closing="WindowClosing" LocationChanged="WindowLocationChanged" StateChanged="WindowStateChanged" SizeChanged="WindowSizeChanged" MinHeight="500" MinWidth="300" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" helpers:WindowCustomizer.CanMaximize="False">
+    <Grid>
+        <controls:Menu Height="23" Name="mainMenu" VerticalAlignment="Top" MenuType="Manager" />
+    </Grid>
+</Window>
